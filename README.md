@@ -1,2 +1,2 @@
-# fonos-secrets-plugin
+# Fonos Secrets Plugin
 💯  Vault integration plugin
