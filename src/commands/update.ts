@@ -1,8 +1,8 @@
 import { Command, flags } from "@oclif/command";
 const getStdin = require("get-stdin-with-tty");
 
-export default class CreateCommand extends Command {
-  static description = "this command create a secret in fonos.";
+export default class UpdateCommand extends Command {
+  static description = "updates a secret at fonos.";
 
   static args = [{ name: "name" }];
   static flags = {
@@ -12,14 +12,14 @@ export default class CreateCommand extends Command {
   };
 
   async run() {
-    const { args, flags } = this.parse(CreateCommand);
+    const { args, flags } = this.parse(UpdateCommand);
 
     if (args.name && flags["from-literal"]) {
-      this.log(`your secret is ${args.name} password: ${flags["from-literal"]}`);
+      // await secret.updateSecret({args.name, flags["from-literal"]})
     }
     if (args.name && flags["from-stdin"]) {
       const stdin = await getStdin()
-      this.log(`your secret is ${args.name} stdinps: ${stdin}`);
+      // await secret.updateSecret({args.name, stdin})
     }
   }
 }
