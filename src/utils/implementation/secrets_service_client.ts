@@ -27,7 +27,6 @@ export default class SecretService implements ISecretsService {
 
   async create(request: CreateSecretRequest): Promise<CreateSecretResponse> {
     const result = await this._service.createSecret(request);
-    console.log("client")
     return result;
   }
 }

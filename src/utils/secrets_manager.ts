@@ -25,8 +25,9 @@ export default class SecretsManager {
     this._secretsService = service;
   }
 
-  async createSecret(request: CreateSecretRequest): Promise<CreateSecretResponse> {
-    console.log("manager")
+  async createSecret(
+    request: CreateSecretRequest
+  ): Promise<CreateSecretResponse> {
     return this._secretsService.create(request);
   }
 }
