@@ -50,6 +50,7 @@
     "version": "oclif-dev readme && git add README.md"
   },
   "dependencies": {
+    "@fonos/secrets": "^0.0.100",
     "@oclif/command": "^1.8.0",
     "@oclif/config": "^1.17.0",
     "get-stdin": "^9.0.0",
