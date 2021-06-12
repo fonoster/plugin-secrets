@@ -17,7 +17,13 @@
  * limitations under the License.
  */
 import ISecretsService from "./interfaces/isecrets_service";
-import {CreateSecretRequest, CreateSecretResponse} from "./types";
+import {
+  CreateSecretRequest,
+  CreateSecretResponse,
+  ListSecretRequest,
+  GetSecretResponse,
+  ListSecretResponse
+} from "./types";
 
 export default class SecretsManager {
   _secretsService: ISecretsService;
@@ -29,5 +35,17 @@ export default class SecretsManager {
     request: CreateSecretRequest
   ): Promise<CreateSecretResponse> {
     return this._secretsService.create(request);
+  }
+
+  async listSecret(request: ListSecretRequest): Promise<ListSecretResponse> {
+    return await this._secretsService.list(request);
+  }
+
+  async getSecret(name: string): Promise<GetSecretResponse> {
+    return await this._secretsService.get(name);
+  }
+
+  async deleteSecret(name: string) {
+    return await this._secretsService.delete(name);
   }
 }

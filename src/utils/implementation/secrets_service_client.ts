@@ -18,7 +18,13 @@
  */
 import ISecretsService from "../interfaces/isecrets_service";
 import SecretsService from "@fonos/secrets";
-import {CreateSecretRequest, CreateSecretResponse} from "../types";
+import {
+  CreateSecretRequest,
+  CreateSecretResponse,
+  ListSecretRequest,
+  GetSecretResponse,
+  ListSecretResponse
+} from "../types";
 export default class SecretService implements ISecretsService {
   _service: SecretsService;
   constructor() {
@@ -28,5 +34,22 @@ export default class SecretService implements ISecretsService {
   async create(request: CreateSecretRequest): Promise<CreateSecretResponse> {
     const result = await this._service.createSecret(request);
     return result;
+  }
+
+  async get(name: string): Promise<GetSecretResponse> {
+    const result = await this._service.getSecret(name);
+    return result;
+  }
+
+  async list(request: ListSecretRequest): Promise<ListSecretResponse> {
+    const result = await this._service.listSecret(request);
+    return {
+      nextPageToken: result.nextPageToken,
+      name: result.name
+    };
+  }
+
+  async delete(name: string): Promise<void> {
+    return await this._service.deleteSecret(name);
   }
 }

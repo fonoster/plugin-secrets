@@ -18,6 +18,17 @@
  */
 import {
   CreateSecretRequest,
-  CreateSecretResponse
-} from "@fonos/secrets/dist/types";
-export {CreateSecretRequest, CreateSecretResponse};
+  CreateSecretResponse,
+  ListSecretRequest,
+  ListSecretResponse,
+  GetSecretResponse,
+  Secret
+} from "@fonos/secrets/dist/client/types";
+export {
+  CreateSecretRequest,
+  CreateSecretResponse,
+  ListSecretRequest,
+  GetSecretResponse,
+  ListSecretResponse,
+  Secret
+};
