@@ -1,2 +1,2 @@
-# Secrets Plugin (Backed by Vault)
-💯  Vault integration plugin
+# Secrets Plugin
+💯 Vault integration plugin
