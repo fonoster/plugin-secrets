@@ -16,6 +16,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+import "./config";
 import {Command} from "@oclif/command";
 import {cli} from "cli-ux";
 import SecretsManager from "../../utils/secrets_manager";

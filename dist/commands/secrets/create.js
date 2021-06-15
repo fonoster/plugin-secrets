@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+require("../../config");
 const command_1 = require("@oclif/command");
 const errors_1 = require("@oclif/errors");
 const secrets_manager_1 = require("../../utils/secrets_manager");
