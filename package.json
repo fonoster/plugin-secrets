@@ -65,7 +65,7 @@
     ],
     "topics": {
       "secrets": {
-        "description": "manage fonos secrets"
+        "description": "manage fonos secrets(experimental)"
       }
     }
   }
