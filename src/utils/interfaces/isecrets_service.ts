@@ -28,5 +28,4 @@ export default interface ISecretsService {
   list(request: ListSecretRequest): Promise<ListSecretResponse>;
   get(name: string): Promise<GetSecretResponse>;
   delete(name: string): Promise<void>;
-  // logs(request: LogFunctionRequest): void;
 }

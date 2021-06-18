@@ -45,7 +45,7 @@ export default class SecretService implements ISecretsService {
     const result = await this._service.listSecret(request);
     return {
       nextPageToken: result.nextPageToken,
-      name: result.name
+      secrets: result.secrets
     };
   }
 

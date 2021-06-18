@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+const tslib_1 = require("tslib");
 /*
  * Copyright (C) 2021 by Fonoster Inc (https://fonoster.com)
  * http://github.com/fonoster/fonos-plugin-funcs
@@ -18,11 +19,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-require("../../config");
+require("./config");
 const command_1 = require("@oclif/command");
 const cli_ux_1 = require("cli-ux");
-const secrets_manager_1 = require("../../utils/secrets_manager");
-const secrets_service_client_1 = require("../../utils/implementation/secrets_service_client");
+const secrets_manager_1 = tslib_1.__importDefault(require("../../utils/secrets_manager"));
+const secrets_service_client_1 = tslib_1.__importDefault(require("../../utils/implementation/secrets_service_client"));
 class DeleteCommand extends command_1.Command {
     async run() {
         const { args } = this.parse(DeleteCommand);

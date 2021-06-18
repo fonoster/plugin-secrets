@@ -1,3 +1,4 @@
+import "./config";
 import { Command, flags } from "@oclif/command";
 export default class CreateCommand extends Command {
     static description: string;

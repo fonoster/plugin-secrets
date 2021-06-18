@@ -17,6 +17,7 @@
  * limitations under the License.
  */
 import "./config";
+import {Secret} from "../../utils/types";
 import {Command, flags} from "@oclif/command";
 import {CLIError} from "@oclif/errors";
 import SecretsManager from "../../utils/secrets_manager";
@@ -46,15 +47,11 @@ export default class ListCommand extends Command {
         pageSize: pageSize,
         pageToken: pageToken
       });
-      const list = result.name;
-      //Fix return in API
-      const l = JSON.parse(JSON.stringify(list));
+      const list = result.secrets;
       pageToken = result.nextPageToken;
 
-      // Dont ask this if is the first time or empty data
-
       const t = new Table();
-      l.forEach((secret: any) => {
+      list.forEach((secret: Secret) => {
         t.cell("Name", secret.name);
         t.newRow();
       });

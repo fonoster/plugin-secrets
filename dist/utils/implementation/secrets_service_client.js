@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const secrets_1 = require("@fonos/secrets");
+const tslib_1 = require("tslib");
+const secrets_1 = tslib_1.__importDefault(require("@fonos/secrets"));
 class SecretService {
     constructor() {
         this._service = new secrets_1.default();
@@ -17,7 +18,7 @@ class SecretService {
         const result = await this._service.listSecret(request);
         return {
             nextPageToken: result.nextPageToken,
-            name: result.name
+            secrets: result.secrets
         };
     }
     async delete(name) {
