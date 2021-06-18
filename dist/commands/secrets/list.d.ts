@@ -1,4 +1,4 @@
-import "./config";
+import "../../config";
 import { Command } from "@oclif/command";
 export default class ListCommand extends Command {
     static description: string;

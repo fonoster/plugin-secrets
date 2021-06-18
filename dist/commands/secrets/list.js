@@ -19,7 +19,7 @@ const tslib_1 = require("tslib");
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-require("./config");
+require("../../config");
 const command_1 = require("@oclif/command");
 const errors_1 = require("@oclif/errors");
 const secrets_manager_1 = tslib_1.__importDefault(require("../../utils/secrets_manager"));
@@ -38,10 +38,7 @@ class ListCommand extends command_1.Command {
                 pageToken: pageToken
             });
             const list = result.secrets;
-            //Fix return in API
-            // const l = JSON.parse(JSON.stringify(list));
             pageToken = result.nextPageToken;
-            // Dont ask this if is the first time or empty data
             const t = new Table();
             list.forEach((secret) => {
                 t.cell("Name", secret.name);
