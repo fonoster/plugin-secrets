@@ -11,7 +11,7 @@
     "version": "oclif-dev readme && git add README.md"
   },
   "dependencies": {
-    "@fonos/secrets": "^0.0.123",
+    "@fonos/secrets": "^0.1.7-alpha.0",
     "@oclif/command": "^1.8.0",
     "@oclif/config": "^1.17.0",
     "@oclif/errors": "^1.3.4",
