@@ -37,11 +37,24 @@ export default class CreateCommand extends Command {
   async run() {
     const {args, flags} = this.parse(CreateCommand);
     const _secretsManager = new SecretsManager(new SecretService());
+    let secret;
+    if (flags["from-stdin"]) {
+      secret = await getStdin();
+    } else {
+      secret = flags["from-literal"];
+    }
+
+    if (!args.name || !secret) {
+      throw new CLIError(
+        "Cant create a secret without a name or a secret-value. Type [secrets:create --help] for more information"
+      );
+    }
+
     const request: CreateSecretRequest = {
       name: args.name,
-      secret: flags["from-literal"] ?? (await getStdin())
+      secret
     };
-
+    
     try {
       const result = await _secretsManager.createSecret(request);
       console.log(result.name);

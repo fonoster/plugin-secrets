@@ -27,12 +27,21 @@ const secrets_service_client_1 = tslib_1.__importDefault(require("../../utils/im
 const getStdin = require("get-stdin-with-tty");
 class CreateCommand extends command_1.Command {
     async run() {
-        var _a;
         const { args, flags } = this.parse(CreateCommand);
         const _secretsManager = new secrets_manager_1.default(new secrets_service_client_1.default());
+        let secret;
+        if (flags["from-stdin"]) {
+            secret = await getStdin();
+        }
+        else {
+            secret = flags["from-literal"];
+        }
+        if (!args.name || !secret) {
+            throw new errors_1.CLIError("Cant create a secret without a name or a secret-value. Type [secrets:create --help] for more information");
+        }
         const request = {
             name: args.name,
-            secret: (_a = flags["from-literal"]) !== null && _a !== void 0 ? _a : (await getStdin())
+            secret
         };
         try {
             const result = await _secretsManager.createSecret(request);
