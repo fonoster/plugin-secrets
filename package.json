@@ -50,8 +50,8 @@
     "/npm-shrinkwrap.json",
     "/oclif.manifest.json"
   ],
-  "bugs": "https://github.com/fonoster/fonos-secrets-plugin/issues",
-  "repository": "https://github.com/fonoster/fonos-secrets-plugin/issues",
+  "bugs": "https://github.com/fonoster/fonos-plugin-secrets/issues",
+  "repository": "https://github.com/fonoster/fonos-plugin-secrets/issues",
   "homepage": "https://github.com/fonoster/fonos",
   "keywords": [
     "oclif-plugin"
