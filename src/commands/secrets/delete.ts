@@ -1,8 +1,8 @@
 /*
  * Copyright (C) 2021 by Fonoster Inc (https://fonoster.com)
- * http://github.com/fonoster/fonos-plugin-funcs
+ * http://github.com/fonoster/plugin-funcs
  *
- * This file is part of Project Fonos
+ * This file is part of Fonoster
  *
  * Licensed under the MIT License (the "License");
  * you may not use this file except in compliance with
@@ -22,7 +22,7 @@ import {cli} from "cli-ux";
 import SecretsManager from "../../utils/secrets_manager";
 import SecretService from "../../utils/implementation/secrets_service_client";
 export default class DeleteCommand extends Command {
-  static description = "remove secret from fonos.";
+  static description = "remove Fonoster secret";
   static aliases = ["secrets:del", "secrets:rm"];
   static args = [{name: "name"}];
 

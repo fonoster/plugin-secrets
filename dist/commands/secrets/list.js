@@ -3,9 +3,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = require("tslib");
 /*
  * Copyright (C) 2021 by Fonoster Inc (https://fonoster.com)
- * http://github.com/fonoster/fonos-plugin-funcs
+ * http://github.com/fonoster/plugin-funcs
  *
- * This file is part of Project Fonos
+ * This file is part of Fonoster
  *
  * Licensed under the MIT License (the "License");
  * you may not use this file except in compliance with
@@ -53,7 +53,7 @@ class ListCommand extends command_1.Command {
     }
 }
 exports.default = ListCommand;
-ListCommand.description = "get a list of fonos secrets";
+ListCommand.description = "list of the secrets you have access to";
 ListCommand.aliases = ["secrets:ls"];
 ListCommand.flags = {
     size: command_1.flags.integer({

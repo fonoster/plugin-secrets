@@ -1,8 +1,8 @@
 /*
  * Copyright (C) 2021 by Fonoster Inc (https://fonoster.com)
- * http://github.com/fonoster/fonos-plugin-funcs
+ * http://github.com/fonoster/plugin-funcs
  *
- * This file is part of Project Fonos
+ * This file is part of Fonoster
  *
  * Licensed under the MIT License (the "License");
  * you may not use this file except in compliance with
@@ -17,7 +17,7 @@
  * limitations under the License.
  */
 import ISecretsService from "../interfaces/isecrets_service";
-import SecretsService from "@fonos/secrets";
+import SecretsService from "@fonoster/secrets";
 import {
   CreateSecretRequest,
   CreateSecretResponse,

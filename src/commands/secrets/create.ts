@@ -1,8 +1,8 @@
 /*
  * Copyright (C) 2021 by Fonoster Inc (https://fonoster.com)
- * http://github.com/fonoster/fonos-plugin-funcs
+ * http://github.com/fonoster/plugin-funcs
  *
- * This file is part of Project Fonos
+ * This file is part of Fonoster
  *
  * Licensed under the MIT License (the "License");
  * you may not use this file except in compliance with
@@ -25,7 +25,7 @@ import {CreateSecretRequest} from "../../utils/types";
 const getStdin = require("get-stdin-with-tty");
 
 export default class CreateCommand extends Command {
-  static description = "this command create a secret in fonos.";
+  static description = "create a Fonoster secret.";
 
   static args = [{name: "name"}];
   static flags = {

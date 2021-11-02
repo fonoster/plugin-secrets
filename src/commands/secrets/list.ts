@@ -1,8 +1,8 @@
 /*
  * Copyright (C) 2021 by Fonoster Inc (https://fonoster.com)
- * http://github.com/fonoster/fonos-plugin-funcs
+ * http://github.com/fonoster/plugin-funcs
  *
- * This file is part of Project Fonos
+ * This file is part of Fonoster
  *
  * Licensed under the MIT License (the "License");
  * you may not use this file except in compliance with
@@ -26,7 +26,7 @@ import SecretService from "../../utils/implementation/secrets_service_client";
 const Table = require("easy-table");
 
 export default class ListCommand extends Command {
-  static description = "get a list of fonos secrets";
+  static description = "list of the secrets you have access to";
   static aliases = ["secrets:ls"];
   static flags = {
     size: flags.integer({
